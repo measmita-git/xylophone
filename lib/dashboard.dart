@@ -10,10 +10,12 @@ class DashboardScreen extends StatelessWidget {
   Expanded buildKey({Color? color, required int soundPlay}) {
     return Expanded(
       child: Container(
-        color: color,
         child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: color,
+          ),
           child: Text(
-            "click me",
+            "",
           ),
           onPressed: () {
             playSound(soundPlay);
@@ -28,7 +30,7 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      // backgroundColor: Colors.black,
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
